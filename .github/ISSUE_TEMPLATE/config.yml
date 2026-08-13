@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar una vulnerabilidad de seguridad
+    url: https://github.com/OWNER/asistencia-legal/blob/main/CONTRIBUTING.md#cómo-reportar-una-vulnerabilidad-de-seguridad
+    about: No uses un issue público para esto — sigue el proceso descrito en CONTRIBUTING.md

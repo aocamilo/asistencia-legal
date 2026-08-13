@@ -1,0 +1,47 @@
+name: Reportar un error
+description: Algo en el formulario o el sitio no funciona como debería
+labels: ["bug"]
+body:
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Describe el problema con la mayor claridad posible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      description: ¿Qué hiciste, en qué orden, hasta ver el error?
+      placeholder: |
+        1. Entra a...
+        2. Llena el campo...
+        3. Da clic en...
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+    validations:
+      required: false
+
+  - type: input
+    id: dispositivo
+    attributes:
+      label: Dispositivo y navegador
+      description: La mayoría del tráfico de este sitio es móvil — este dato es clave para reproducir el error.
+      placeholder: "ej. iPhone 12, Safari; o Android, Chrome"
+    validations:
+      required: true
+
+  - type: textarea
+    id: captura
+    attributes:
+      label: Captura de pantalla o video
+      description: Si puedes, arrastra una imagen o video aquí.
+    validations:
+      required: false

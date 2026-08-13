@@ -1,0 +1,26 @@
+name: Proponer una mejora
+description: Una idea para mejorar el sitio o el formulario
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema resuelve para la persona que pide ayuda o para el equipo jurídico?
+      description: Empieza por el problema, no por la solución técnica — eso ayuda a evaluar si encaja con el proyecto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Tu propuesta
+      description: Si ya tienes una idea de cómo resolverlo, descríbela aquí.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+    validations:
+      required: false
