@@ -35,6 +35,17 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
               Política de privacidad
             </a>
           </p>
+          <p className="mt-1">
+            Hecho con &lt;3 por{" "}
+            <a
+              href="https://x.com/AoCamilo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              @aocamilo
+            </a>
+          </p>
         </footer>
       </body>
     </html>
