@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,12 @@ export const viewport: Viewport = {
   themeColor: "#047857",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  // Leer headers() opta esta ruta por renderizado dinámico: es lo que le
+  // permite a Next.js generar y aplicar un nonce fresco por request al CSP
+  // (ver proxy.ts) en sus scripts inline de hidratación de RSC.
+  await headers();
+
   return (
     <html lang="es-CO" className="h-full antialiased">
       <body className="flex min-h-[100dvh] flex-col bg-white text-neutral-900">
