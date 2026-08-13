@@ -37,7 +37,9 @@ export async function enviarSolicitud(
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...datos, token }),
-      signal: AbortSignal.timeout(10_000),
+      // Apps Script puede tardar en arrancar en frío (15-20s+); 10s lo
+      // cortaba a mitad de camino y producía 502 en solicitudes válidas.
+      signal: AbortSignal.timeout(25_000),
     });
 
     if (!respuesta.ok) {
