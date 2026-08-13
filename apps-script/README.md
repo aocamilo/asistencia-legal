@@ -28,9 +28,9 @@ en GitHub.
    en la barra lateral).
 2. Baja hasta **Propiedades del script** y agrega:
 
-   | Propiedad | Valor |
-   |---|---|
-   | `SHARED_TOKEN` | Un valor secreto largo y aleatorio. Genéralo con `openssl rand -hex 32` en tu terminal. |
+   | Propiedad       | Valor                                                                                     |
+   | --------------- | ----------------------------------------------------------------------------------------- |
+   | `SHARED_TOKEN`  | Un valor secreto largo y aleatorio. Genéralo con `openssl rand -hex 32` en tu terminal.   |
    | `DESTINATARIOS` | Los correos del equipo coordinador que deben recibir la notificación, separados por coma. |
 
    Este mismo valor de `SHARED_TOKEN` es el que pondrás luego en la variable de entorno
